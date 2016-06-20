@@ -1,0 +1,6 @@
+*.tmp
+*.swn
+*.swo
+*.swp
+*.pyc
+trente/secret.py
