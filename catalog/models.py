@@ -55,7 +55,7 @@ class Release(models.Model):
     cover = models.ImageField(upload_to='uploads/%Y/%m/%d/', null=True, blank=True)
     catalog_id = models.CharField(max_length=255, null=True, blank=True, unique=True)
     format = models.CharField(max_length=255, choices=RELEASE_FORMATS, default='cd')
-    price = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
+    price = MoneyField(max_digits=10, decimal_places=2, default_currency='USD', null=True, blank=True)
     embed = models.TextField(null=True, blank=True)
     published = models.BooleanField(default=False)
     release_date = models.DateField(default=timezone.now, null=True, blank=True)
@@ -75,7 +75,7 @@ class Release(models.Model):
 class Track(models.Model):
     name = models.CharField(max_length=255)
     release = models.ForeignKey('Release', on_delete=models.DO_NOTHING, null=True, blank=True)
-    length = models.DurationField()
+    length = models.DurationField(null=True, blank=True)
     created = models.DateTimeField(default=timezone.now)
     updated = models.DateTimeField(default=timezone.now)
     deleted = models.DateTimeField(null=True, blank=True)
