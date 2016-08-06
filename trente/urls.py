@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^$', views.home, name='home'),
     url(r'^pages/', include('pages.urls')),
     url(r'^releases/', include('pages.urls')),
+    url(r'^admin/', include('smuggler.urls')),
     url(r'^admin/', admin.site.urls),
 ]
