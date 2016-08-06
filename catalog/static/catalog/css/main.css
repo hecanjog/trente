@@ -495,8 +495,9 @@ table {
     display: flex;
     justify-content: space-between; }
     .tracks li p {
-      font-size: 1rem;
-      padding-right: 1rem; }
+      font-size: 0.8rem;
+      padding-right: 1rem;
+      margin: 0; }
 
 * {
   font-family: 'HKGroteskMedium';
