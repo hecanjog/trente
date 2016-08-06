@@ -6,15 +6,34 @@
         <meta name="description" content="Trente Oiseaux">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" media="screen" href="//fontlibrary.org/face/hk-grotesk" type="text/css"/>
         <link rel="stylesheet" href="/static/css/main.css" type="text/css" charset="utf-8">
-
-        <link href='//fonts.googleapis.com/css?family=Montserrat+Alternates:400,700|Londrina+Solid|Lobster' rel='stylesheet' type='text/css'>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+        <style>
+            * {
+                font-family: 'HKGroteskMedium';
+            }
+        </style>
     </head>
 
     <body>
-        {% block header %}{% endblock %}
+        {% block header %}
+        <header>
+            <ul class="nav">
+                <li><a href="/">Trente Oiseaux</a></li>
+                <li><a href="/catalog/">Catalog</a></li>
+                <li><a href="/bernhard-gunter/">Bernhard Gunter</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </header>
+        {% endblock %}
+
         {% block content %}{% endblock %}
-        {% block footer %}{% endblock %}
+
+        {% block footer %}
+        <footer>
+        </footer>
+        {% endblock %}
     </body>
 </html>
