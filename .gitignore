@@ -4,3 +4,4 @@
 *.swp
 *.pyc
 trente/secret.py
+catalog/static/catalog/uploads

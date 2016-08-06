@@ -3,5 +3,5 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class ReleasesConfig(AppConfig):
-    name = 'releases'
+class CatalogConfig(AppConfig):
+    name = 'catalog'
