@@ -448,11 +448,16 @@ table {
 
 .nav {
   margin: 0;
-  padding: 0;
+  padding: 2rem;
   list-style-type: none; }
   .nav li {
     margin: 0;
     padding: 0; }
+    .nav li a {
+      display: block; }
+
+.home-link {
+  padding-bottom: 2rem; }
 
 .main {
   display: flex;
@@ -473,14 +478,14 @@ table {
   object-fit: cover; }
 
 .release__info {
-  padding: 0 1rem; }
+  padding: 0 2rem; }
   .release__info h2, .release__info h3 {
     font-weight: 400;
     margin: 0;
     font-size: 1rem; }
   .release__info h2 {
     text-transform: lowercase;
-    margin-bottom: 1rem; }
+    margin-bottom: 2rem; }
   .release__info h3 {
     text-transform: uppercase; }
 
@@ -505,10 +510,11 @@ table {
 
 html, body {
   background: #cfc8ac;
-  color: #222; }
+  color: #000; }
 
 a {
   text-decoration: none;
+  text-transform: lowercase;
   color: #000; }
   a:hover {
     text-decoration: underline; }

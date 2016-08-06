@@ -14,11 +14,12 @@
 
 html, body {
     background: $color-cream;
-    color: $color-coal;
+    color: $color-black;
 }
 
 a {
     text-decoration: none;
+    text-transform: lowercase;
     color: $color-black;
 
     &:hover {
