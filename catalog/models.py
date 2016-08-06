@@ -56,6 +56,7 @@ class Release(models.Model):
     catalog_id = models.CharField(max_length=255, null=True, blank=True, unique=True)
     format = models.CharField(max_length=255, choices=RELEASE_FORMATS, default='cd')
     price = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
+    embed = models.TextField(null=True, blank=True)
     published = models.BooleanField(default=False)
     release_date = models.DateField(default=timezone.now, null=True, blank=True)
     artist = models.ForeignKey('Artist', on_delete=models.DO_NOTHING, null=True, blank=True)

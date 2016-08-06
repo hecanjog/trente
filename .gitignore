@@ -5,3 +5,4 @@
 *.pyc
 trente/secret.py
 catalog/static/catalog/uploads
+.sass-cache
