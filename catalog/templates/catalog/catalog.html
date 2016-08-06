@@ -18,6 +18,15 @@
                 {% endif %}
 
                 <h3>{{ release.title }}</h3>
+
+                <ol class="tracks">
+                    {% for track in release.track_set.all %}
+                    <li>
+                        <p>{{ track.name }}</p>
+                        <p>{{ track.length }}</p>
+                    </li>
+                    {% endfor %}
+                </ol>
             </div>
         </li>
         {% endfor %}
