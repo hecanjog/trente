@@ -26,18 +26,19 @@
 
     h2 {
         text-transform: lowercase;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     h3 {
         text-transform: uppercase;
+        margin-bottom: 3rem;
     }
 }
 
 .tracks {
     margin: 0;
     padding: 0;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     list-style-type: none;
 
     li {

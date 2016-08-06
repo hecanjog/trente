@@ -457,7 +457,7 @@ table {
       display: block; }
 
 .home-link {
-  padding-bottom: 2rem; }
+  padding-bottom: 1rem; }
 
 .main {
   display: flex;
@@ -485,14 +485,15 @@ table {
     font-size: 1rem; }
   .release__info h2 {
     text-transform: lowercase;
-    margin-bottom: 2rem; }
+    margin-bottom: 1rem; }
   .release__info h3 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 3rem; }
 
 .tracks {
   margin: 0;
   padding: 0;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   list-style-type: none; }
   .tracks li {
     margin: 0;
