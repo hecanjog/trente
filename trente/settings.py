@@ -15,9 +15,6 @@ from secret import *
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MEDIA_ROOT = os.path.join(BASE_DIR, 'catalog/static/catalog/')
-MEDIA_URL = '/static/catalog/'
-
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -100,9 +97,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media', 'media')
+MEDIA_URL = '/static/media/'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static', 'media'),
+]
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
