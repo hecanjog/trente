@@ -23,14 +23,27 @@ class AdminImageWidget(forms.FileInput):
         return mark_safe(u''.join(output))
 
 class ReleaseAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'published', 'published_date', 'created', 'updated', 'deleted')
+    list_display = ('title', 'published', 'published_date', 'created', 'updated', 'deleted')
+    search_fields = ['title']
     formfield_overrides = {
-        models.models.ImageField: {'widget': AdminImageWidget }
+        models.models.ImageField: {'widget': AdminImageWidget}
     }
-    #inlines = [EmailInline, PhoneInline, AddressInline]
-    #search_fields = ['first_name', 'last_name', 'member_id']
+
+class ReleaseInline(admin.StackedInline):
+    model = models.Release
+    extra = 0
+
+class ArtistAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ['name']
+    inlines = [ReleaseInline]
+
+class BandAdmin(admin.ModelAdmin):
+    list_display = ('name',)
+    search_fields = ['name']
+    inlines = [ReleaseInline]
 
 admin.site.register(models.Release, ReleaseAdmin)
-admin.site.register(models.Artist)
-admin.site.register(models.Band)
+admin.site.register(models.Artist, ArtistAdmin)
+admin.site.register(models.Band, BandAdmin)
 admin.site.register(models.Label)
