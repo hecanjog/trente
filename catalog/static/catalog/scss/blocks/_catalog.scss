@@ -1,0 +1,20 @@
+.catalog {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+}
+
+.release {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.release__cover {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.release__info {
+    padding: 0 1rem;
+}

@@ -1,0 +1,25 @@
+{% extends "trente/base.html" %}
+
+{% block content %}
+    <ul class="catalog">
+        {% for release in releases %}
+        <li class="release">
+            {% if release.cover %}
+                <img class="release__cover" src="{{ release.cover.url }}" />
+            {% endif %}
+
+            <div class="release__info">
+                {% if release.artist %}
+                <h2>{{ release.artist.name }}</h2>
+                {% endif %}
+
+                {% if release.band %}
+                <h2>{{ release.band.name }}</h2>
+                {% endif %}
+
+                <h3>{{ release.title }}</h3>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,27 @@
+@import "vendor/normalize";
+
+@import "lib/variables";
+@import "lib/mixins";
+
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/catalog";
+
+* {
+    font-family: 'HKGroteskMedium';
+    box-sizing: border-box;
+}
+
+html, body {
+    background: $color-cream;
+    color: $color-coal;
+}
+
+a {
+    text-decoration: none;
+    color: $color-black;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
