@@ -27,7 +27,7 @@ class TrackInline(admin.TabularInline):
     extra = 0
 
 class ReleaseAdmin(admin.ModelAdmin):
-    list_display = ('title', 'published', 'published_date', 'created', 'updated', 'deleted')
+    list_display = ('title', 'published', 'release_date', 'created', 'updated', 'deleted')
     search_fields = ['title']
     change_list_template = 'smuggler/change_list.html'
     inlines = [TrackInline]

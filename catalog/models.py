@@ -1,4 +1,6 @@
 from __future__ import unicode_literals
+import moneyed
+from djmoney.models.fields import MoneyField
 from django.db import models
 from django.http import Http404
 from django.utils import timezone
@@ -53,8 +55,9 @@ class Release(models.Model):
     cover = models.ImageField(upload_to='uploads/%Y/%m/%d/', null=True, blank=True)
     catalog_id = models.CharField(max_length=255, null=True, blank=True, unique=True)
     format = models.CharField(max_length=255, choices=RELEASE_FORMATS, default='cd')
+    price = MoneyField(max_digits=10, decimal_places=2, default_currency='USD')
     published = models.BooleanField(default=False)
-    published_date = models.DateField(default=timezone.now, null=True, blank=True)
+    release_date = models.DateField(default=timezone.now, null=True, blank=True)
     artist = models.ForeignKey('Artist', on_delete=models.DO_NOTHING, null=True, blank=True)
     band = models.ForeignKey('Band', on_delete=models.DO_NOTHING, null=True, blank=True)
     label = models.ForeignKey('Label', on_delete=models.DO_NOTHING, null=True, blank=True)
