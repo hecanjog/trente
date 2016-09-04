@@ -84,7 +84,7 @@ class Release(models.Model):
     deleted = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
-        return '{} - {} [{}]'.format(self.artist.name, self.title, self.label.name)
+        return self.title
 
     def getBandcampEmbed(self, url):
         # cache bandcamp embed
