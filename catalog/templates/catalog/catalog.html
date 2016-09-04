@@ -20,7 +20,7 @@
 
                 <h3>{{ release.title }} <span>{{ release.catalog_id }}</span></h3>
 
-                {% if release.embed %}{{ release.embed }}{% endif %}
+                {% if release.bandcamp_embed %}{{ release.bandcamp_embed | safe }}{% endif %}
 
                 <ol class="tracks">
                     {% for track in release.track_set.all %}
