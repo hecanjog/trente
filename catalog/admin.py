@@ -35,21 +35,15 @@ class ReleaseAdmin(admin.ModelAdmin):
         models.models.ImageField: {'widget': AdminImageWidget}
     }
 
-class ReleaseInline(admin.StackedInline):
-    model = models.Release
-    extra = 0
-
 class ArtistAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ['name']
     change_list_template = 'smuggler/change_list.html'
-    inlines = [ReleaseInline]
 
 class BandAdmin(admin.ModelAdmin):
     list_display = ('name',)
     search_fields = ['name']
     change_list_template = 'smuggler/change_list.html'
-    inlines = [ReleaseInline]
 
 class TrackAdmin(admin.ModelAdmin):
     list_display = ('name',)
