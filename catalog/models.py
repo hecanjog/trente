@@ -86,6 +86,14 @@ class Release(models.Model):
     def __str__(self):
         return self.title
 
+    @property
+    def artist(self):
+        return ' / '.join([ artist.name for artist in self.artists.all() ])
+
+    @property
+    def band(self):
+        return ' / '.join([ band.name for band in self.bands.all() ])
+
     def getBandcampEmbed(self, url):
         # cache bandcamp embed
         page = requests.get(url).content

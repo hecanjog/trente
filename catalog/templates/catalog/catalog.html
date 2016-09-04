@@ -11,11 +11,11 @@
 
             <div class="release__info">
                 {% if release.artist %}
-                <h2>{{ release.artist.name }}</h2>
+                <h2>{{ release.artist }}</h2>
                 {% endif %}
 
                 {% if release.band %}
-                <h2>{{ release.band.name }}</h2>
+                <h2>{{ release.band }}</h2>
                 {% endif %}
 
                 <h3>{{ release.title }} <span>{{ release.catalog_id }}</span></h3>
