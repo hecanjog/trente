@@ -473,9 +473,7 @@ table {
   margin: 1rem 0; }
 
 .release__cover {
-  width: 20rem;
-  height: 20rem;
-  object-fit: cover; }
+  height: 20rem; }
 
 .release__info {
   padding: 0 2rem; }
