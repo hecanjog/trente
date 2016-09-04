@@ -483,6 +483,8 @@ table {
     font-weight: 400;
     margin: 0;
     font-size: 1rem; }
+    .release__info h2 span, .release__info h3 span {
+      color: #777; }
   .release__info h2 {
     text-transform: lowercase;
     margin-bottom: 1rem; }

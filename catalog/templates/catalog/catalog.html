@@ -3,6 +3,7 @@
 {% block content %}
     <ul class="catalog">
         {% for release in releases %}
+        {% if release.published %}
         <li class="release">
             {% if release.cover %}
                 <img class="release__cover" src="{{ release.cover.url }}" />
@@ -17,7 +18,7 @@
                 <h2>{{ release.band.name }}</h2>
                 {% endif %}
 
-                <h3>{{ release.title }}</h3>
+                <h3>{{ release.title }} <span>{{ release.catalog_id }}</span></h3>
 
                 {% if release.embed %}{{ release.embed }}{% endif %}
 
@@ -31,6 +32,7 @@
                 </ol>
             </div>
         </li>
+        {% endif %}
         {% endfor %}
     </ul>
 {% endblock %}
